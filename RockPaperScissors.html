@@ -12,9 +12,9 @@
 /// escolha do usuario e escolha do pc
 var userChoice = prompt("Do you choose rock, paper or scissors?");
 
-var computerChoice = Math.random();
+console.log("User : " + userChoice);
 
-console.log(computerChoice);
+var computerChoice = Math.random();
 
 if(computerChoice >= 0.67){
     
@@ -29,10 +29,9 @@ if(computerChoice >= 0.67){
     computerChoice = "rock";
 }
 
-console.log(computerChoice);
+console.log("Computer: " + computerChoice);
 
-
-////////////////// fazendo o jogo
+//  other if -------------------------
 
 /*var userChoice = prompt("Do you choose rock, paper or scissors?");
 var computerChoice = Math.random();
@@ -44,33 +43,8 @@ if (computerChoice < 0.34) {
 	computerChoice = "scissors";
 } console.log("Computer: " + computerChoice);*/
 
-var compare = function(choice1,choice2){
-    
-    if(choice1 === choice2){
-        
-        return "The result is a tie!";
-        
-    }else if(choice1 === "rock"){
-        
-        if(choice2 === "scissors"){
-            
-            return "rock wins";
-            
-        }else{
-            
-            return "paper wins";
-        }
-    }
-};
 
-console.log(compare);
-
-////////////////
-
-
-
-//função do jogo
-
+//função do jogo ------------------
 var compare = function(choice1,choice2){
     
     if(choice1 === choice2){
@@ -99,7 +73,7 @@ var compare = function(choice1,choice2){
             return "scissors wins"
         }
     
-	}else if(choice1 === "scissors"){
+    }else if(choice1 === "scissors"){
         
         if(choice2 === "rock"){
             
@@ -112,8 +86,11 @@ var compare = function(choice1,choice2){
     }
 };
 
-console.log(compare);
 
+compare(userChoice,computerChoice);
+alert("User : " + userChoice);
+alert("Computer : " + computerChoice);
+alert(compare);
 
 </script>
 
